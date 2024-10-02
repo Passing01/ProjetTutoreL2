@@ -1,0 +1,133 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/produit_Agricole1.jpeg' %}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/produit_agricole2.avif' %}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/produit_artisant1.jpeg' %}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/produit_artisant2.jpeg' %}" class="d-block w-100" alt="banner image">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock banner-slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Produits</h1>
+        <small class="fs-S">Dodla offers a wide range of products in 
+            both liquid milk and by-products categories. The liquid 
+            milk comprises of 5 types of variants and by-product comprises 
+            of 14 types of variants.
+
+                Dodla offers a wide range of milk products comprising of fresh Milk,
+                Butter, Ghere, Paneer, Curd, Flavoured ilk Doodh Peda, Ice Cream and 
+                Skimed Milk Powder.</small>
+
+    </div>
+</div>
+{% endblock information %}
+
+{% block main-content %}
+    <div class="container">
+        <h2 class="text-center">Commerce Equitable</h2>
+        <br/><br/>
+        <div class="row-container">
+            <div class="card-group">
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'AGR' %}">
+                    <img src="{% static 'app/images/products/produit_agricole_laye.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        
+
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'AGR' %}">
+                    <img src="{% static 'app/images/products/produit_agricole4.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'ART' %}">
+                    <img src="{% static 'app/images/products/produit_artisant1.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+
+        <div class="card-group">
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'AGR' %}">
+                    <img src="{% static 'app/images/products/produit_agricole2.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        
+
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'AGR' %}">
+                <img src="{% static 'app/images/products/produit_agricole3.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'category' 'ART' %}">
+                    <img src="{% static 'app/images/products/produit_artisant2.jpeg' %}" class="card-img-top" alt="">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </div>
+    <br/><br/>
+{% endblock main-content %}
